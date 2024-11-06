@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       env:
-        type: Choice
+        type: choice
         description: Test Environment
         required: true
         options:
