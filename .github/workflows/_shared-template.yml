@@ -1,5 +1,5 @@
 name: Shared Template
-run-name: ${{ github.workflow }} ${{ inpus.env }}
+run-name: ${{ github.workflow }} ${{ inputs.env }}
 
 on:
   workflow_call:
