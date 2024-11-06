@@ -24,4 +24,4 @@ jobs:
     steps:
       - name: Get runner name
         run: |
-          echo "Here is the test"
+          echo "env is set to ${{ inputs.env }}"
