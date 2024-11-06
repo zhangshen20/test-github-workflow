@@ -1,0 +1,27 @@
+name: Shared Template
+run-name: ${{ github.workflow }} ${{ inpus.env }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: Envrionment to deploy
+        default: dev
+        type: choice
+        options:
+          - dev
+          - stg
+          - prd
+      version:
+        description: The version / git hash used to tag
+        default: latest
+        type: string
+
+jobs:
+  test-deploy:
+    name: Get runner 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get runner name
+        run: |
+          echo "Here is the test"
