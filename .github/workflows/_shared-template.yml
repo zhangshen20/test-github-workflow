@@ -2,16 +2,12 @@ name: Shared Template
 run-name: ${{ github.workflow }} ${{ inpus.env }}
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       env:
         description: Envrionment to deploy
         default: dev
-        type: choice
-        options:
-          - dev
-          - stg
-          - prd
+        type: string
       version:
         description: The version / git hash used to tag
         default: latest
