@@ -21,7 +21,7 @@ jobs:
   test-workflow:
     uses: ./.github/workflows/_shared-template.yml
     with:
-      environment: ${{ inputs.env }}
+      env: ${{ inputs.env }}
 
   # This workflow contains a single job called "build"
   build:
